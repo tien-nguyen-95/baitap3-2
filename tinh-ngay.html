@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input type="number" min="1" max="12" id="month" style="width: 100px;"/>
+        <button type="button" id="click" >Tính số ngày</button>
+    </form>
+    <script>
+        let click =document.getElementById("click");
+        click.onclick =function(){
+            let month =+document.getElementById("month").value;
+            switch(month){
+                case 2:
+                    document.write("Tháng 2 có 28 hoặc 29 ngày");
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.write("Tháng " +month + " có 30 ngày");
+                    break;
+                default:
+                    document.write("Tháng " +month + " có 31 ngày");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
